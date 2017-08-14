@@ -9,12 +9,10 @@ RUN rpm -i https://rpm.nodesource.com/pub_6.x/el/7/x86_64/nodesource-release-el7
     yum install nodejs -y
 
 # rails setup
-RUN adduser -m rails
+RUN useradd -m rails
 ADD bin/rails_setup.sh /usr/local/bin/rails_setup.sh
 RUN chmod 744 /usr/local/bin/rails_setup.sh
 RUN /usr/local/bin/rails_setup.sh
-# ADD conf/home/rails/Gemfile /home/rails/Gemfile
-# RUN chown rails:rails /home/rails/Gemfile
 
 # app volumes
 VOLUME /home/rails/app/
