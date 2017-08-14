@@ -22,7 +22,7 @@ $ bundle exec rails s
 ```
 
 
-### How to Connect to rails server from Host PC
+### How to connect the rails server from the local machine
 
 ``console
 $ http://localhost:3000
